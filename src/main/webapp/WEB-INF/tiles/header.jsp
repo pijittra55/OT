@@ -75,10 +75,12 @@
 			<!-- Collection of nav links and other content for toggling -->
 			<div id="navbarCollapse" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
+				<sec:authorize access="hasAnyRole('ADMIN','USER')">
+					<li><a href="/home">พนักงาน</a></li>
 					<sec:authorize access="hasAnyRole('ADMIN')">
-						<li><a href="/home">พนักงาน</a></li>
-						<li><a href="/admin">ผู้ดูแลระบบ</a></li>
+					<li><a href="/admin">ผู้ดูแลระบบ</a></li>
 					</sec:authorize>
+				</sec:authorize>
 				</ul>
 				<sec:authorize access="isAuthenticated()">
 					<form:form cssClass="form" action="/logout" method="POST" id="formLogout">
