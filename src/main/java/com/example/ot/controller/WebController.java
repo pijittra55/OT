@@ -12,4 +12,10 @@ public class WebController {
 		return "homePage";
 	}
 	
+	@RequestMapping("/")
+	String homePage() {
+		System.out.print("TEST DDDDDDDdd");
+		return "onePage";
+	}
+	
 }

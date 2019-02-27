@@ -70,14 +70,13 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a href="/one" class="navbar-brand"> ระบบขอลง OT </a>
+				<a href="/" class="navbar-brand"> ระบบขอลง OT </a>
 			</div>
 			<!-- Collection of nav links and other content for toggling -->
 			<div id="navbarCollapse" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a
-						href="/home">พนักงาน</a></li>
 					<sec:authorize access="hasAnyRole('ADMIN')">
+						<li><a href="/home">พนักงาน</a></li>
 						<li><a href="/admin">ผู้ดูแลระบบ</a></li>
 					</sec:authorize>
 				</ul>
